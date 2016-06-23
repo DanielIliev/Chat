@@ -1,5 +1,4 @@
 <?php
-	$conf = parse_ini_file('config.ini');
 	class DatabaseUsage {
 		private $server;
 		private $dbusername;
@@ -16,6 +15,7 @@
 			catch(PDOException $e)
 			{
 				echo "Connection failed";
+				exit;
 			}
 		}
 
@@ -28,9 +28,31 @@
 				$query->execute();
 				echo "Registration is successful";
 			}
-				catch(PDOException $e)
-			{
+			catch(PDOException $e) {
 				echo "Registration failed, the chosen username is already taken";
+				exit;
+			}
+		}
+
+		function LoginUser($username, $password) {
+			try {
+				$query = $this->connection->prepare('SELECT password FROM users WHERE username = :username');
+				$query->bindParam(':username', $username);
+				$query->execute();
+				if ($query->rowCount() == 0) {
+					echo 'Wrong password or username';
+					exit;
+				}
+				$result = $query->fetch(PDO::FETCH_ASSOC);
+				if (password_verify($password, $result['password']))
+					echo 'Welcome back ' . $username;
+				else
+					echo 'Wrong password or username';
+					exit;
+			}
+			catch(PDOException $e) {
+				echo 'Wrong password or username';
+				exit;
 			}
 		}
 
@@ -47,4 +69,7 @@
 
 		function __destruct() {}
 	}
+
+	$conf = parse_ini_file('config.ini');
+	$databaseInstance = new DatabaseUsage($conf['host'], $conf['username'], $conf['password'], $conf['dbname']);
 ?>

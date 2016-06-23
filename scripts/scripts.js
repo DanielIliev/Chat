@@ -9,4 +9,14 @@ $(function() {
 		});
 		e.preventDefault();
 	});
+	/* Login */
+	$("#login_form").on("submit", function(e) {
+		var data = $('#login_form :input').serializeArray();
+		$.post($('#login_form').attr('action'), data, function(info) {
+			alert(info);
+		}).done(function() {
+			$.mobile.navigate('#home');
+		});
+		e.preventDefault();
+	});
 });

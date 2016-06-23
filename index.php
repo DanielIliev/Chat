@@ -41,9 +41,9 @@
 		<div data-role="content" class="ui-content">
 			<form method="POST" action="scripts/createUser.php" id="reg_form">
 				<label for="username">Username</label>
-				<input type="text" name="user" class="form-control" id="username" placeholder="Username..." autocomplete="off" maxlength="20" required>
+				<input type="text" name="user" id="username" placeholder="Username..." autocomplete="off" maxlength="20" required>
 				<label for="password">Password</label>
-				<input type="password" name="pass" class="form-control" id="password" placeholder="Password..." maxlength="20" required>
+				<input type="password" name="pass" id="password" placeholder="Password..." maxlength="20" required>
 				<input type="submit" value="Register" />
 			</form>
 		</div>
@@ -56,12 +56,12 @@
 			<h1>Login</h1>
 		</div>
 		<div data-role="content" class="ui-content">
-			<form method="POST" action="scripts/createUser.php" id="reg_form">
-				<label for="username">Username</label>
-				<input type="text" name="user" class="form-control" id="username" placeholder="Username..." autocomplete="off" maxlength="20" required>
-				<label for="password">Password</label>
-				<input type="password" name="pass" class="form-control" id="password" placeholder="Password..." maxlength="20" required>
-				<input type="submit" value="Register" />
+			<form method="POST" action="scripts/loginUser.php" id="login_form">
+				<label for="username_login">Username</label>
+				<input type="text" name="user" id="username_login" placeholder="Username..." autocomplete="off" maxlength="20" required>
+				<label for="password_login">Password</label>
+				<input type="password" name="pass" id="password_login" placeholder="Password..." maxlength="20" required>
+				<input type="submit" value="Login" />
 			</form>
 		</div>
 		<div data-role="footer">
