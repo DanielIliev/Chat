@@ -21,10 +21,6 @@
 
 		function InsertUser($username, $password) {
 			try {
-				/*$sql = 'INSERT INTO users (username, password)
-				VALUES ("' . $username . '", "' . $password . '")';
-				$this->connection->exec($sql);
-				echo "Registration completed";*/
 				$query = $this->connection->prepare('INSERT INTO users (username, password)
 				VALUES (:username, :password)');
 				$query->bindParam(':username', $username);
