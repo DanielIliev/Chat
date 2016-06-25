@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-	<div data-role="page" data-theme="b" data-dialog="true" data-close-btn="off">
+	<div data-role="page" data-theme="b" data-dialog="true" data-close-btn="off" id="start">
 		<div data-role="header">
 			<h1>Chat App</h1>
 		</div>
@@ -70,36 +70,22 @@
 	</div>
 	<div data-role="page" data-theme="b" id="home">
 		<div data-role="header">
-			<h1>Chat app</h1>
+			<a href="#start" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-back">
+				Go Back
+			</a>
+			<h1 id="name"></h1>
 		</div>
 		<div data-role="content" class="ui-content chat">
-			<div class="ui-grid-solo chatview ui-content">
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<h1>Chat section</h1>
-				<form method="POST" action="scripts/postMessage.php">
+			<div class="ui-grid-solo ui-content chatview">
+				<div id="chat-area"></div>
+				<form method="POST" action="scripts/writeMessage.php" id="writemsg_form">
 					<legend>Type your message:</legend>
-					<input type="text" placeholder="Write message..." />
+					<input type="text" name="usermsg" placeholder="Write message..." autocomplete="off" maxlength="50" required/>
 					<input type="submit" value="Send message" />
 				</form>
+			</div>
+			<div class="ui-grid-solo ui-content error">
+				<h1 style="color: #FFF;">Please log in to visit the chat</h1>
 			</div>
 		</div>
 		<div data-role="footer" data-position="fixed" class="ui-bar">

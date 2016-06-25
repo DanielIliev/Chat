@@ -40,18 +40,16 @@
 				$query->bindParam(':username', $username);
 				$query->execute();
 				if ($query->rowCount() == 0) {
-					echo 'Wrong password or username';
 					exit;
 				}
 				$result = $query->fetch(PDO::FETCH_ASSOC);
-				if (password_verify($password, $result['password']))
-					echo 'Welcome back ' . $username;
-				else
-					echo 'Wrong password or username';
+				if (password_verify($password, $result['password'])) {
+					echo $username;
+				} else {
 					exit;
+				}
 			}
 			catch(PDOException $e) {
-				echo 'Wrong password or username';
 				exit;
 			}
 		}
