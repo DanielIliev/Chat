@@ -17,15 +17,25 @@ header.php
 LICENSE
 
 README.md
+```
 
+
+```
 /css
   /themes
     ------------------
     Customized jQuery Mobile theme using ThemeRoller
     ------------------
   style.css
+```
+
+```
 /other
   chatData.txt
+  
+```
+
+```
 /scripts
   config.ini
   createUser.php
