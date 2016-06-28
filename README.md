@@ -1,6 +1,7 @@
 #Chat App
 
-##Author and contributors: Daniel Iliev
+##Author and contributors:  
+Daniel Iliev
 
 #####Licensing information: Read LICENSE
 
