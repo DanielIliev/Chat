@@ -40,3 +40,6 @@ jQuery v2.2.2
 jQuery Mobile v1.4.5  
 HTML5  
 CSS3  
+
+##Bugs & Fixes
+There are no known bugs
