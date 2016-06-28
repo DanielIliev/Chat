@@ -5,19 +5,12 @@ Daniel Iliev
 Read LICENSE
 ##File List:  
 ```
-
 footer.php
-
 index.php
-
 header.php
-
 LICENSE
-
 README.md
 ```
-
-
 ```
 /css
   /themes
@@ -26,13 +19,11 @@ README.md
     ------------------
   style.css
 ```
-
 ```
 /other
   chatData.txt
   
 ```
-
 ```
 /scripts
   config.ini
@@ -42,5 +33,4 @@ README.md
   loginUser.php
   scripts.js
   writeMessage.php
-  
 ```
