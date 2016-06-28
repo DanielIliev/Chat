@@ -34,3 +34,9 @@ README.md
   scripts.js
   writeMessage.php
 ```
+##Languages
+PHP v5.6  
+jQuery v2.2.2
+jQuery Mobile v1.4.5
+HTML5
+CSS3
