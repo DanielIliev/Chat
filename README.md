@@ -1,9 +1,8 @@
 #Chat App
 
-##Licensing information: Read LICENSE
+###Licensing information: Read LICENSE
 
-Author and contributors:
-Daniel Iliev
+###Author and contributors: Daniel Iliev
 
 File List:
 
