@@ -9,10 +9,15 @@ File List:
 ..
 
 footer.php
+
 index.php
+
 header.php
+
 LICENSE
+
 README.md
+
 /css
   /themes
     ------------------
