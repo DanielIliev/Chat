@@ -1,12 +1,9 @@
 #Chat App
-
 ##Author and contributors:  
-Daniel Iliev
-
-#####Licensing information: Read LICENSE
-
-File List:
-
+Daniel Iliev  
+###Licensing information:  
+Read LICENSE
+###File List:  
 ```
 
 footer.php
