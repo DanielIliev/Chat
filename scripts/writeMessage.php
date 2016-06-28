@@ -26,5 +26,5 @@
 	$msg = htmlentities($_POST['usermsg']);
 	writeMessage($file, $user, $msg);
 	$linesNum = getNumbersOfLines($file);
-	if ($linesNum > 5) deleteMessageFromLog($file);
+	if ($linesNum > 20) deleteMessageFromLog($file);
 ?>

@@ -4,7 +4,7 @@
 		$(function() {
 			setInterval(function() {
 				$("#chat-area").load("scripts/fetchChat.php");
-			}, 1000);
+			}, 500);
 		});
 	</script>
 </body>
