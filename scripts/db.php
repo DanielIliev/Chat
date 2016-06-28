@@ -21,8 +21,8 @@
 
 		function InsertUser($username, $password) {
 			try {
-				$query = $this->connection->prepare('INSERT INTO users (username, password)
-				VALUES (:username, :password)');
+				$query = $this->connection->prepare('INSERT INTO users (username, password, status)
+				VALUES (:username, :password, 0)');
 				$query->bindParam(':username', $username);
 				$query->bindParam(':password', $password);
 				$query->execute();
@@ -45,6 +45,8 @@
 				$result = $query->fetch(PDO::FETCH_ASSOC);
 				if (password_verify($password, $result['password'])) {
 					echo $username;
+					$query = $this->connection->prepare('UPDATE users SET status = 1 WHERE username = :username');
+					$query->execute();
 				} else {
 					exit;
 				}

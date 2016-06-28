@@ -77,11 +77,12 @@
 		</div>
 		<div data-role="content" class="ui-content chat">
 			<div class="ui-grid-solo ui-content chatview">
-				<div id="chat-area"></div>
+				<p id="chat-area"></p>
 				<form method="POST" action="scripts/writeMessage.php" id="writemsg_form">
 					<legend>Type your message:</legend>
 					<input type="text" name="usermsg" placeholder="Write message..." autocomplete="off" maxlength="50" required/>
 					<input type="submit" value="Send message" />
+					<input type="hidden" value="" name="getname" />
 				</form>
 			</div>
 			<div class="ui-grid-solo ui-content error">
